@@ -1,0 +1,29 @@
+import random
+
+roll_count = 0
+
+print("===== DICE ROLLER GAME =====")
+
+while True:
+    choice = input("Roll the dice? (y/n): ").strip().lower()
+
+    if choice == "y":
+        die1 = random.randint(1, 6)
+        die2 = random.randint(1, 6)
+
+        total = die1 + die2
+        roll_count += 1
+
+        print("Dice 1:", die1)
+        print("Dice 2:", die2)
+        print("Total Score:", total)
+        print("Roll Count:", roll_count)
+        print("--------------------------")
+
+    elif choice == "n":
+        print("Thanks for playing!")
+        
+        break
+
+    else:
+        print("Invalid choice! Please enter y or n.")
